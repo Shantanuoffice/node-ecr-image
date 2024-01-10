@@ -1,7 +1,5 @@
 FROM node:latest
 
-RUN apk add --no-cache bash
-
 RUN npm i -g --force yarn
 
 WORKDIR /app
