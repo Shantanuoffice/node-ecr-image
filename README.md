@@ -1,5 +1,5 @@
 # Node ECR image
 
 ```
-Hi there...
+Hi there... This is a POC for pushing the images to ECR
 ```
