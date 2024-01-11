@@ -43,7 +43,7 @@ on:
 jobs:
   deploy:
     name: Build the Docker Image
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     environment: production
 
     steps:
