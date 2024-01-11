@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:16-alpine
 
 RUN npm i -g --force yarn
 
@@ -10,6 +10,6 @@ RUN yarn install
 
 COPY . .
 
-CMD [ "node", "index.js" ]
-
 EXPOSE 4000
+
+CMD [ "node", "index.js" ]
