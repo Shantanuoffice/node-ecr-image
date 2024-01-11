@@ -99,7 +99,8 @@ jobs:
         IMAGE_TAG: ${{ github.sha }}
         aws-region: us-east-1
       run: |
-        sudo docker stop my_node_container || true
-        sudo docker rm my_node_container || true
-        sudo docker pull $ECR_REGISTRY/$ECR_REPOSITORY:X-$IMAGE_TAG
-        sudo docker run -d --name my_node_container -p 4000:4000 $ECR_REGISTRY/$ECR_REPOSITORY:X-$IMAGE_TAG
+        docker ps
+        docker stop my_node_container || true
+        docker rm my_node_container || true
+        docker pull $ECR_REGISTRY/$ECR_REPOSITORY:X-$IMAGE_TAG
+        docker run -d --name my_node_container -p 4000:4000 $ECR_REGISTRY/$ECR_REPOSITORY:X-$IMAGE_TAG
