@@ -5,7 +5,7 @@ const app = express();
 app.get('/', (req, res) => {
     res.json({
         status: "success",
-        msg: "Hello from server v4"
+        msg: "Hello from server v5"
     }).status(200);
 });
 
